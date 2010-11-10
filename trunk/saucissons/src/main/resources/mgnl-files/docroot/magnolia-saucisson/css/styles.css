@@ -1,0 +1,271 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	color: #383838;
+	text-decoration: none;
+}
+
+a:link {
+	color: #383838;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #383838;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #630000;
+}
+
+body {
+	background: #000000;
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #383838;
+}
+
+.black {
+	background-color: #000000;
+}
+
+img {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+div.index {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#content {
+	margin: 0 auto;
+	background: #1e7c01;
+	width: 989px;
+	text-align: left;
+	background: url(images/mainbg.gif) repeat-y center;
+}
+
+#main {
+	width: 989px;
+	margin: 0 auto;
+	clear: both;
+}
+
+div.side {
+	width: 64px;
+}
+
+div.left {
+	position: absolute;
+	left: 0px;
+}
+
+div.right {
+	position: absolute;
+	right: 0px;
+}
+
+#header {
+	text-align: center;
+	height: 140px;
+	width: 289px;
+}
+
+#logo {
+	height: 79px;
+	text-align: left;
+	padding-left: 300px;
+	background: #000000;
+}
+
+#logo a {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	text-decoration: none;
+	font-style: italic;
+	font-size: 18px;
+	color: #ffffff;
+}
+
+#logo H2 a {
+	font-size: 12px;
+}
+
+#left {
+	width: 278px;
+}
+
+#lefttop {
+	background: url(images/lefttop.gif) no-repeat top;
+	height: 13px;
+}
+
+.leftbg {
+	background: url(images/leftbg.jpg) no-repeat center top;
+	padding-top: 25px;
+}
+
+.leftcenter {
+	background: url(images/leftcenter.gif) no-repeat right;
+	height: 19px;
+}
+
+#left ul {
+	list-style: none;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#left ul.level1 li div {
+	background: url("images/title.png") repeat-x scroll 0 0 transparent;
+	color: #FFFFFF;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight: normal;
+	height: 30px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-top: 10px;
+	width: 236px;
+}
+
+#left ul.level2 li {
+	background: url(images/liststyle.png) no-repeat center left;
+	padding-left: 25px;
+	padding-bottom: 0px;
+}
+
+#left ul.level2 li div {
+	background: none;
+	color: #196050;;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	height: 12px;
+	width: none;
+	margin: 0 auto;
+	padding: 5px;
+	padding-top: 5px;
+}
+
+#left ul.left-menu li a {
+	display: block;
+	text-decoration: none;
+	color: #383838;
+	padding: 3px;
+}
+
+ul.left-menu li a:hover {
+	background: #FFDDBB;
+	color: #000000;
+}
+
+ul.left-menu li a:visited {
+	color: #383838;
+}
+
+#left a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	color: #383838;
+	font-weight: bold;
+}
+
+#left a:visited {
+	color: #383838;
+}
+
+#right {
+	float: right;
+	width: 700px;
+}
+
+#righttop {
+	background: url(images/righttop.gif) no-repeat top right;
+	height: 13px;
+}
+
+#right H4 {
+	width: 660px;
+	height: 30px;
+	font-size: 18px;
+	font-weight: normal;
+	padding-left: 14px;
+	padding-top: 10px;
+	color: #ffffff;
+	background: url(images/right_top.png) no-repeat;
+	margin: 0 auto;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+}
+
+.rightcenter {
+	background: url(images/rightcenter.gif) no-repeat right;
+	height: 19px;
+}
+
+.rightbg {
+	background: url(images/rightbg.jpg) no-repeat center top transparent;
+	padding-top: 25px;
+	overflow: hidden;
+}
+
+#right p {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#right ol,#right ul {
+	margin-left: 30px;
+}
+
+#right h2 {
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+	color: #196050;
+}
+
+.read {
+	text-align: right;
+	padding-right: 150px;
+}
+
+#mainbot {
+	background: url(images/mainbot.gif) no-repeat;
+	height: 20px;
+	clear: both;
+}
+
+#footer {
+	height: 40px;
+	width: 990px;
+	clear: both;
+	padding-top: 15px;
+	background: #000000 url(images/footer.gif) no-repeat top;
+	padding-bottom: 5px;
+}
+
+#footer p {
+	margin: 0;
+	font-size: 10px;
+	text-align: center;
+	color: #ffffff;
+}
+
+#footer a {
+	color: #ffffff;
+}

@@ -1,0 +1,128 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>info.magnolia</groupId>
+		<artifactId>magnolia-parent-pom-community-module</artifactId>
+		<version>17</version>
+	</parent>
+
+	<groupId>com.hut.magnolia</groupId>
+	<artifactId>saucissons</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Saucissons Website</name>
+
+	<properties>
+		<magnolia.version>4.3.8</magnolia.version>
+		<blossom.version>1.1.1</blossom.version>
+		<spring.version>3.0.5.RELEASE</spring.version>
+	</properties>
+
+	<build>
+		<resources>
+			<!-- Add the Attributes from the POM to properties files -->
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<!-- Compiler version -->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<!-- Add timestamp to configuration files -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+				<version>1.0-beta-3</version>
+				<inherited>true</inherited>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<format>{0,date,yyyy-MM-dd'T'HH:mm:ss.SSS'+10:00'}</format>
+					<items>
+						<item>timestamp</item>
+					</items>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<!-- Magnolia Dependencies -->
+		<dependency>
+			<groupId>info.magnolia</groupId>
+			<artifactId>magnolia-core</artifactId>
+			<version>${magnolia.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>info.magnolia</groupId>
+			<artifactId>magnolia-module-mail</artifactId>
+			<version>${magnolia.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>info.magnolia</groupId>
+			<artifactId>magnolia-gui</artifactId>
+			<version>${magnolia.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>info.magnolia</groupId>
+			<artifactId>magnolia-module-admininterface</artifactId>
+			<version>${magnolia.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>info.magnolia</groupId>
+			<artifactId>magnolia-module-templating</artifactId>
+			<version>${magnolia.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>info.magnolia</groupId>
+			<artifactId>magnolia-module-fckeditor</artifactId>
+			<version>${magnolia.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Blossom Module -->
+		<dependency>
+			<groupId>info.magnolia</groupId>
+			<artifactId>magnolia-module-blossom</artifactId>
+			<version>${blossom.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Spring MVC -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>
