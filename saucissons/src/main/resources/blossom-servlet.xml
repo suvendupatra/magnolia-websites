@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+	   	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<context:annotation-config />
+
+	<context:component-scan base-package="com.hut.magnolia.saucisson.controller" />
+
+	<bean class="info.magnolia.module.blossom.preexecution.BlossomHandlerMapping">
+		<property name="targetHandlerMappings">
+			<list>
+				<bean
+					class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+					<property name="useDefaultSuffixPattern" value="false" />
+				</bean>
+				<bean
+					class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
+			</list>
+		</property>
+	</bean>
+
+	<bean class="info.magnolia.module.blossom.view.TemplateViewResolver">
+		<property name="prefix" value="/templates/${project.artifactId}/templates/" />
+		<property name="suffix" value=".jsp" />
+		<property name="viewRenderer">
+			<bean class="info.magnolia.module.blossom.view.JspTemplateViewRenderer" />
+		</property>
+	</bean>
+
+	<bean class="info.magnolia.module.blossom.view.ParagraphViewResolver">
+		<property name="prefix" value="/templates/${project.artifactId}/paragraphs/" />
+		<property name="suffix" value=".jsp" />
+		<property name="viewRenderer">
+			<bean class="info.magnolia.module.blossom.view.JspParagraphViewRenderer" />
+		</property>
+	</bean>
+</beans> 
