@@ -85,7 +85,7 @@ public class ContactParagraph {
                 LOGGER.debug("defaultMessage:" + fieldError.getDefaultMessage());
                 errorMessages.add(fieldError.getDefaultMessage());
             }
-            return new ModelAndView("contactusParagraph", "errorMessage", errorMessages);
+            return new ModelAndView("contactParagraph", "errorMessage", errorMessages);
         }
 
         Map<String, String> tv = new HashMap<String, String>();
@@ -109,7 +109,7 @@ public class ContactParagraph {
     @TabFactory("Settings")
     public void createDialog(TabBuilder builder) {
         builder.addEdit("title", "Title", "");
-        builder.addEdit("bodyText", "Text", "");
+        builder.addFckEditor("bodyText", "Text", "");
         builder.addEdit("errorMessage", "Error message", "Blank is not acceptable.");
     }
 

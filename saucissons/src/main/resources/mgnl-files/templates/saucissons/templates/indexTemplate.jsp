@@ -8,6 +8,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="google-site-verification" content="xxAviH_beSvl5eKB6e2ZzSJnFzxinPiCdGDD-cGaEZU" />
+	<meta name="robots" content="index, follow" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<title>${content.title}</title>
 	<meta name="description" content="${content.metaDescription}" />

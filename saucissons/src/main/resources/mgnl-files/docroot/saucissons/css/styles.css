@@ -72,6 +72,13 @@ div.right {
 	right: 0px;
 }
 
+input[type=submit] {
+	border: 1px solid #383838;
+	color: #383838;
+	font-weight: bold;
+	padding: 4px;
+}
+
 #header {
 	text-align: center;
 	height: 140px;
