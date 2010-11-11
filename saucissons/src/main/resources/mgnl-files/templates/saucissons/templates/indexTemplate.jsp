@@ -7,11 +7,12 @@
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="google-site-verification" content="xxAviH_beSvl5eKB6e2ZzSJnFzxinPiCdGDD-cGaEZU" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<title>${content.title}</title>
 	<meta name="description" content="${content.metaDescription}" />
 	<meta name="keywords" content="${content.metaKeywords}" />
-	<link href="${pageContext.request.contextPath}/docroot/magnolia-saucisson/css/styles.css" rel="stylesheet" type="text/css" />
+	<link href="${pageContext.request.contextPath}/docroot/saucissons/css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="black">
@@ -19,7 +20,7 @@
 		<cms:mainBar paragraph="saucisson-main-dialog" label="Page Properties"/>
 		<br/><br/><br/>
 		<a href="${pageContext.request.contextPath}/saucissons/produits/presentation">
-			<img height="360" border="0" width="564" src="${pageContext.request.contextPath}/docroot/magnolia-saucisson/images/image377.jpg">
+			<img height="360" border="0" width="564" src="${pageContext.request.contextPath}/docroot/saucissons/images/image377.jpg">
 		</a><br/>
 		<p class=index style='text-align:center;text-align:center'>
 			<span style='font-size:36.0pt;font-family:"Script MT Bold";color:white;font-style:italic;language:fr'>

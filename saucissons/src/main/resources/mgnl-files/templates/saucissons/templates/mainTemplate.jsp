@@ -7,15 +7,15 @@
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<link rel="shortcut icon" href="${pageContext.request.contextPath}/docroot/magnolia-saucisson/favicon.ico" />
+	<link rel="shortcut icon" href="${pageContext.request.contextPath}/docroot/saucissons/favicon.ico" />
 	<title>${content.title}</title>
 	<meta name="description" content="${content.metaDescription}" />
 	<meta name="keywords" content="${content.metaKeywords}" />
-	<link href="${pageContext.request.contextPath}/docroot/magnolia-saucisson/css/styles.css" rel="stylesheet" type="text/css" />
-	<link href="${pageContext.request.contextPath}/docroot/magnolia-saucisson/css/fullcalendar.css"  rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="${pageContext.request.contextPath}/docroot/magnolia-saucisson/js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/docroot/magnolia-saucisson/js/jquery-ui-custom.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/docroot/magnolia-saucisson/js/fullcalendar.min.js"></script>
+	<link href="${pageContext.request.contextPath}/docroot/saucissons/css/styles.css" rel="stylesheet" type="text/css" />
+	<link href="${pageContext.request.contextPath}/docroot/saucissons/css/fullcalendar.css"  rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="${pageContext.request.contextPath}/docroot/saucissons/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/docroot/saucissons/js/jquery-ui-custom.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/docroot/saucissons/js/fullcalendar.min.js"></script>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
 			<div id="left">
 				<div id="header" class="black">
 					<a href="${pageContext.request.contextPath}/saucissons">
-						<img src="${pageContext.request.contextPath}/docroot/magnolia-saucisson/images/cochon.jpg"/>
+						<img src="${pageContext.request.contextPath}/docroot/saucissons/images/cochon.jpg"/>
 					</a>
 				</div>
 				<jsp:include page="common/menu.jsp" />
