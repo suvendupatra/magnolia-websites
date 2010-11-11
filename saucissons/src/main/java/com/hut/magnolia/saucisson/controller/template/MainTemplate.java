@@ -39,5 +39,6 @@ public class MainTemplate {
         settings.addEdit("title", "Title", "The HTML page title");
         settings.addEdit("metaDescription", "Meta Description", "HTML Meta Description of the web site");
         settings.addEdit("metaKeywords", "Meta Keywords", "HTML Meta Keywords of the web site");
+        settings.addCheckbox("hideInNav", "Hide page in navigation menu", "");
     }
 }
