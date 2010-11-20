@@ -72,6 +72,12 @@ div.right {
 	right: 0px;
 }
 
+input,select,textarea {
+	background-color: #F0F0D0;
+	color: #333333;
+	padding: 2px;
+}
+
 input[type=submit] {
 	border: 1px solid #383838;
 	color: #383838;

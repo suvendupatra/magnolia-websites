@@ -54,7 +54,7 @@
 			</div>
 			<div id="left">
 				<div id="header" class="black">
-					<a href="${pageContext.request.contextPath}/saucissons">
+					<a href="${pageContext.request.contextPath}/">
 						<img src="${pageContext.request.contextPath}/docroot/saucissons/images/cochon.jpg"/>
 					</a>
 				</div>
