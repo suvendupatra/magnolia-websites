@@ -8,14 +8,18 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link rel="shortcut icon" href="${pageContext.request.contextPath}/docroot/saucissons/favicon.ico" />
-	<title>${content.title}</title>
+	
 	<meta name="description" content="${content.metaDescription}" />
 	<meta name="keywords" content="${content.metaKeywords}" />
+	
 	<link href="${pageContext.request.contextPath}/docroot/saucissons/css/styles.css" rel="stylesheet" type="text/css" />
-	<link href="${pageContext.request.contextPath}/docroot/saucissons/css/fullcalendar.css"  rel="stylesheet" type="text/css" />
+	<link href="${pageContext.request.contextPath}/docroot/saucissons/css/carousel.css"  rel="stylesheet" type="text/css" />
+	
 	<script type="text/javascript" src="${pageContext.request.contextPath}/docroot/saucissons/js/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/docroot/saucissons/js/jquery-ui-custom.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/docroot/saucissons/js/fullcalendar.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/docroot/saucissons/js/jquery.infinitecarousel.js"></script>
+	
+	<title>${content.title}</title>
 </head>
 
 <body>
