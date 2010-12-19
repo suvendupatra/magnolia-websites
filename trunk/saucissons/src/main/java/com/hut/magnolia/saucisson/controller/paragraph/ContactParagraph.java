@@ -1,12 +1,8 @@
 package com.hut.magnolia.saucisson.controller.paragraph;
 
-import info.magnolia.cms.gui.dialog.DialogEdit;
-import info.magnolia.cms.gui.dialog.DialogTab;
-import info.magnolia.cms.util.AlertUtil;
 import info.magnolia.module.blossom.annotation.Paragraph;
 import info.magnolia.module.blossom.annotation.ParagraphDescription;
 import info.magnolia.module.blossom.annotation.TabFactory;
-import info.magnolia.module.blossom.annotation.TabValidator;
 import info.magnolia.module.blossom.dialog.TabBuilder;
 
 import java.util.ArrayList;
@@ -17,7 +13,6 @@ import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -108,16 +103,7 @@ public class ContactParagraph {
 
     @TabFactory("Settings")
     public void createDialog(TabBuilder builder) {
-        builder.addEdit("title", "Title", "");
-        builder.addFckEditor("bodyText", "Text", "");
-        builder.addEdit("errorMessage", "Error message", "Blank is not acceptable.");
-    }
-
-    @TabValidator("Settings")
-    public void validate(DialogTab dialogTab) {
-        DialogEdit title = (DialogEdit) dialogTab.getSub("title");
-        if (StringUtils.isEmpty(title.getValue())) {
-            AlertUtil.setMessage("You need to enter a title!");
-        }
+        builder.addEdit("title", "Title", "").setConfig("i18n", true);
+        builder.addFckEditor("bodyText", "Text", "").setConfig("i18n", true);
     }
 }

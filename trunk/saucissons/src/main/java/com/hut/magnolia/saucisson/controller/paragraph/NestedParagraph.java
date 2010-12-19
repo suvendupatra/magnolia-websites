@@ -34,7 +34,7 @@ public class NestedParagraph {
     @TabFactory("Content")
     public void content(TabBuilder tab) {
         tab.addStatic("Title, Title of the paragraph");
-        tab.addEdit("title", "Title", "Main title");
+        tab.addEdit("title", "Title", "Main title").setConfig("i18n", true);
     }
 
     @TabValidator("Content")

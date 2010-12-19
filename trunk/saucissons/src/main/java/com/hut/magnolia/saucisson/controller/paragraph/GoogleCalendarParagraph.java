@@ -39,7 +39,7 @@ public class GoogleCalendarParagraph {
     @TabFactory("Google Calendar")
     public void content(TabBuilder tab) {
         tab.addStatic("Google Calendar");
-        tab.addEdit("title", "Title", "");
+        tab.addEdit("title", "Title", "").setConfig("i18n", true);
         tab.addEdit("bgColor", "Background Color", "");
         tab.addEdit("fontColor", "Font Color", "");
         tab.addEdit("src", "Source Calendar", "");

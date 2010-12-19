@@ -55,7 +55,7 @@ public class CarouselParagraph {
     @TabFactory("Carousel")
     public void content(TabBuilder tab) {
         tab.addStatic("Carousel parameters");
-        tab.addEdit("title", "Title", "");
+        tab.addEdit("title", "Title", "").setConfig("i18n", true);
         tab.addSelect("transitionSpeed", "Image transition speed", "", transitionSpeeds);
         tab.addSelect("displayTime", "Image display time", "", displayTime);
         tab.addCheckbox("displayThumbnails", "Display images thumbnails", "");

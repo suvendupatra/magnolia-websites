@@ -59,7 +59,7 @@ public class FacebookLikeParagraph {
     public void content(TabBuilder tab) {
         tab.addStatic("Facebook Application ID");
         tab.addLink("url", "Page to link to the Like Button", "Leave empty if refers to current page");
-        tab.addEdit("title", "Like title", "");
+        tab.addEdit("title", "Like title", "").setConfig("i18n", true);
         tab.addSelect("font", "Font", "", FacebookLikeParagraph.fonts);
         tab.addSelect("scheme", "Color Scheme", "", FacebookLikeParagraph.schemes);
     }
