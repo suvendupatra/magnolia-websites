@@ -1,5 +1,6 @@
 <%@ taglib prefix="cms" uri="cms-taglib"%>
 <%@ taglib prefix="cmsu" uri="cms-util-taglib"%>
+<%@ taglib prefix="cmsfn" uri="http://www.magnolia.info/tlds/cmsfn-taglib.tld"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -30,7 +31,7 @@
 		<cms:loadPage path="/saucissons/produits/presentation"/>
 		<div class="side left">
 			<cms:adminOnly>
-				<br/>
+				<br/><br/>
 			</cms:adminOnly>
 			<cms:newBar contentNodeCollectionName="LeftSideParagraphs"
 				paragraph="image-paragraph" newLabel="Add Image to side" />
@@ -40,7 +41,7 @@
 		</div>
 		<div class="side right">
 			<cms:adminOnly>
-				<br/>
+				<br/><br/>
 			</cms:adminOnly>
 			<cms:newBar contentNodeCollectionName="RightSideParagraphs"
 				paragraph="image-paragraph" newLabel="Add Image to side" />
@@ -60,6 +61,12 @@
 				<div id="header" class="black">
 					<a href="${pageContext.request.contextPath}/">
 						<img src="${pageContext.request.contextPath}/docroot/saucissons/images/cochon.jpg"/>
+					</a>
+					<a href="${pageContext.request.contextPath}/en${cmsfn:currentPage().handle}">
+						<img src="${pageContext.request.contextPath}/docroot/saucissons/images/flags/au.png"/>
+					</a>
+					<a href="${pageContext.request.contextPath}/fr${cmsfn:currentPage().handle}">
+						<img src="${pageContext.request.contextPath}/docroot/saucissons/images/flags/fr.png"/>
 					</a>
 				</div>
 				<jsp:include page="common/menu.jsp" />

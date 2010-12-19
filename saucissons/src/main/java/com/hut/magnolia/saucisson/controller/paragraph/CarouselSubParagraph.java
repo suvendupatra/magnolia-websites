@@ -34,6 +34,6 @@ public class CarouselSubParagraph {
     public void content(TabBuilder tab) {
         tab.addStatic("Carousel Image and Text");
         tab.addFile("image", "Image", "Size: 400 x 250");
-        tab.addFckEditor("description", "Text", "");
+        tab.addFckEditor("description", "Text", "").setConfig("i18n", true);
     }
 }

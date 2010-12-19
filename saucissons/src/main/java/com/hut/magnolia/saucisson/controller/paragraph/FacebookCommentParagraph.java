@@ -40,6 +40,6 @@ public class FacebookCommentParagraph {
     public void content(TabBuilder tab) {
         tab.addStatic("Facebook Application ID");
         tab.addEdit("applicationID", "Application ID", "");
-        tab.addEdit("title", "Comment title", "");
+        tab.addEdit("title", "Comment title", "").setConfig("i18n", true);
     }
 }

@@ -48,10 +48,10 @@ public class SimpleParagraph {
      */
     @TabFactory("Content")
     public void content(TabBuilder tab) {
-        tab.addStatic("Title, image and link of the paragraph");
-        tab.addEdit("title", "Title", "");
+        tab.addStatic("Title, image and description of the paragraph");
+        tab.addEdit("title", "Title", "").setConfig("i18n", true);
         tab.addFile("image", "Image", "Image 100 x 70 px");
         tab.addSelect("imagePosition", "Image Position", "", SimpleParagraph.imagePositions);
-        tab.addFckEditor("description", "Description", "");
+        tab.addFckEditor("description", "Description", "").setConfig("i18n", true);
     }
 }

@@ -42,6 +42,6 @@ public class HeaderParagraph {
         // Logo image
         tab.addFile("logo", "Logo", "Logo Image (about 120 x 100 px)");
         // Header text
-        tab.addEdit("text", "Header Text", "Header Text (about 60 characters)");
+        tab.addEdit("text", "Header Text", "Header Text (about 60 characters)").setConfig("i18n", true);
     }
 }

@@ -34,7 +34,7 @@ public class NestedSubParagraph {
     @TabFactory("Content")
     public void content(TabBuilder tab) {
         tab.addStatic("Title, Title of the paragraph");
-        tab.addEdit("text", "Text", "Text");
+        tab.addEdit("text", "Text", "Text").setConfig("i18n", true);
         tab.addLink("link", "Link", "Link");
     }
 
