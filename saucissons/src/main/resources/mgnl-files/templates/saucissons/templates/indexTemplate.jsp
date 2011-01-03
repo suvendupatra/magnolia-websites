@@ -10,7 +10,7 @@
 <meta name="google-site-verification"
 	content="xxAviH_beSvl5eKB6e2ZzSJnFzxinPiCdGDD-cGaEZU" />
 <meta name="robots" content="index, follow" />
-<link rel="shortcut icon" href="favicon.ico" />
+<link rel="shortcut icon" href="${pageContext.request.contextPath}/docroot/saucissons/favicon.ico" />
 <title>${content.title}</title>
 <meta name="description" content="${content.metaDescription}" />
 <meta name="keywords" content="${content.metaKeywords}" />

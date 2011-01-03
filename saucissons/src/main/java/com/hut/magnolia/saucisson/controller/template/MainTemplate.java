@@ -36,9 +36,10 @@ public class MainTemplate {
     @DialogFactory("saucisson-main-dialog")
     public void homeDialog(DialogBuilder dialog) {
         TabBuilder settings = dialog.addTab("Main page settings");
-        settings.addEdit("title", "Title", "The HTML page title");
-        settings.addEdit("metaDescription", "Meta Description", "HTML Meta Description of the web site");
-        settings.addEdit("metaKeywords", "Meta Keywords", "HTML Meta Keywords of the web site");
+        settings.addEdit("title", "Title", "The HTML page title").setConfig("i18n", true);
+        settings.addEdit("metaDescription", "Meta Description", "HTML Meta Description of the web site").setConfig(
+                "i18n", true);
+        settings.addEdit("metaKeywords", "Meta Keywords", "HTML Meta Keywords of the web site").setConfig("i18n", true);
         settings.addCheckbox("hideInNav", "Hide page in navigation menu", "");
     }
 }

@@ -24,10 +24,11 @@
 </head>
 
 <body>
-	<div id="content">
-		<cms:mainBar paragraph="saucisson-main-dialog" label="Page Properties"/>
-		
-		<!-- Sides -->
+<cms:mainBar paragraph="saucisson-main-dialog" label="Page Properties"/>
+
+	<table width="100%"><tr>
+	<!-- Left Side -->
+	<td valign="top">
 		<cms:loadPage path="/saucissons/produits/presentation"/>
 		<div class="side left">
 			<cms:adminOnly>
@@ -39,18 +40,11 @@
 				<cms:includeTemplate />
 			</cms:contentNodeIterator>
 		</div>
-		<div class="side right">
-			<cms:adminOnly>
-				<br/><br/>
-			</cms:adminOnly>
-			<cms:newBar contentNodeCollectionName="RightSideParagraphs"
-				paragraph="image-paragraph" newLabel="Add Image to side" />
-			<cms:contentNodeIterator contentNodeCollectionName="RightSideParagraphs">
-				<cms:includeTemplate />
-			</cms:contentNodeIterator>
-		</div>
 		<cms:unloadPage/>
-		
+	</td>
+	
+	<td width="989px">
+	<div id="content">
 		<!-- Content begins -->
 		<div id="main">
 			<div id="right">
@@ -59,15 +53,22 @@
 			</div>
 			<div id="left">
 				<div id="header" class="black">
-					<a href="${pageContext.request.contextPath}/">
-						<img src="${pageContext.request.contextPath}/docroot/saucissons/images/cochon.jpg"/>
-					</a>
-					<a href="${pageContext.request.contextPath}/en${cmsfn:currentPage().handle}">
-						<img src="${pageContext.request.contextPath}/docroot/saucissons/images/flags/au.png"/>
-					</a>
-					<a href="${pageContext.request.contextPath}/fr${cmsfn:currentPage().handle}">
-						<img src="${pageContext.request.contextPath}/docroot/saucissons/images/flags/fr.png"/>
-					</a>
+					<div style="float:left;margin-left:55px;margin-top:10px;">
+						<a href="${pageContext.request.contextPath}/">
+							<img src="${pageContext.request.contextPath}/docroot/saucissons/images/cochon.jpg"/>
+							<br/>
+							<span style='font-size: 15px; font-family: "Script MT Bold"; color: white; font-style: italic; language: fr'>Comme &#224; la maison... </span>
+						</a>
+					</div>
+					<div style="float:right;padding-right:25px;margin-top: 80px;">
+						<a href="${pageContext.request.contextPath}/en${cmsfn:currentPage().handle}">
+							<img src="${pageContext.request.contextPath}/docroot/saucissons/images/flags/au.png"/>
+						</a>
+						<br/>
+						<a href="${pageContext.request.contextPath}/fr${cmsfn:currentPage().handle}">
+							<img src="${pageContext.request.contextPath}/docroot/saucissons/images/flags/fr.png"/>
+						</a>
+					</div>
 				</div>
 				<jsp:include page="common/menu.jsp" />
 			</div>
@@ -79,6 +80,24 @@
 			<jsp:include page="common/footer.jsp" />
 		</div>
 	</div>
+	</td>
+	
+	<!-- Right Side -->
+	<td valign="top">
+	<cms:loadPage path="/saucissons/produits/presentation"/>
+	<div class="side right">
+			<cms:adminOnly>
+				<br/><br/>
+			</cms:adminOnly>
+			<cms:newBar contentNodeCollectionName="RightSideParagraphs"
+				paragraph="image-paragraph" newLabel="Add Image to side" />
+			<cms:contentNodeIterator contentNodeCollectionName="RightSideParagraphs">
+				<cms:includeTemplate />
+			</cms:contentNodeIterator>
+		</div>
+		<cms:unloadPage/>
+	</td>
+	</tr></table>
 </body>
 
 </html>
