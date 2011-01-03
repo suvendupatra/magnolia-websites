@@ -39,6 +39,10 @@ img {
 	border: 0px;
 }
 
+img.blason {
+	margin-bottom: 15px;
+}
+
 div.index {
 	margin: 0 auto;
 	text-align: center;
