@@ -49,6 +49,7 @@ public class ImageParagraph {
     @TabFactory("Image")
     public void content(TabBuilder tab) {
         tab.addStatic("Image to display");
+        tab.addEdit("imageName", "Name", "Text to be displayed on mouse hover").setConfig("i18n", true);
         tab.addFile("image", "Image", "Image 100 x 70 px");
         tab.addSelect("imagePosition", "Image Position", "", ImageParagraph.imagePositions);
     }
