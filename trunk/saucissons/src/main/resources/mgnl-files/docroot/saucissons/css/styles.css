@@ -284,3 +284,7 @@ ul.left-menu li a:visited {
 #footer a {
 	color: #ffffff;
 }
+
+.herbe {
+	background: url(images/herbe.jpg) no-repeat center top transparent;
+}

@@ -53,5 +53,6 @@ public class SimpleParagraph {
         tab.addFile("image", "Image", "Image 100 x 70 px");
         tab.addSelect("imagePosition", "Image Position", "", SimpleParagraph.imagePositions);
         tab.addFckEditor("description", "Description", "").setConfig("i18n", true);
+        tab.addEdit("extraClass", "Extra CSS class", "");
     }
 }
