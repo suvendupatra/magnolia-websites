@@ -40,7 +40,17 @@ img {
 }
 
 img.blason {
-	margin-bottom: 15px;
+	
+}
+
+div.paragraph-image {
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+div.paragraph-image a {
+	font-weight: bold;
+	color: #808080;
 }
 
 div.index {
