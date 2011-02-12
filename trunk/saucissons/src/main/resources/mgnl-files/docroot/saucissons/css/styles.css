@@ -53,6 +53,10 @@ div.paragraph-image a {
 	color: #808080;
 }
 
+div.youtube-paragraph {
+	padding-left: 25px;
+}
+
 div.index {
 	margin: 0 auto;
 	text-align: center;
@@ -83,7 +87,7 @@ div.left {
 
 div.right {
 	position: absolute;
-	right: 0px;
+	right: 4px;
 }
 
 input,select,textarea {
@@ -241,7 +245,7 @@ ul.left-menu li a:visited {
 
 .rightbg {
 	background: url(images/rightbg.jpg) no-repeat center top transparent;
-	padding-top: 25px;
+	padding: 25px 10px;
 	overflow: hidden;
 }
 

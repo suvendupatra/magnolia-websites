@@ -25,7 +25,7 @@
 <br />
 <br />
 <a
-	href="${pageContext.request.contextPath}/saucissons/produits/presentation">
+	href="${pageContext.request.contextPath}/saucissons/presentation">
 <img height="360" border="0" width="564"
 	src="${pageContext.request.contextPath}/docroot/saucissons/images/image377.jpg"></a><br />
 <p class=index style='text-align: center; text-align: center'><span
