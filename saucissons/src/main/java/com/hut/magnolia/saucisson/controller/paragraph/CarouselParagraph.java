@@ -32,6 +32,7 @@ public class CarouselParagraph {
         CarouselParagraph.transitionSpeeds.put("Medium", "1000");
         CarouselParagraph.transitionSpeeds.put("Slow", "1500");
 
+        CarouselParagraph.displayTime.put("1 sec", "1000");
         CarouselParagraph.displayTime.put("5 sec", "5000");
         CarouselParagraph.displayTime.put("10 sec", "10000");
         CarouselParagraph.displayTime.put("20 sec", "20000");
