@@ -35,11 +35,11 @@ Comme &#224; la maison... </span></p>
 <br />
 
 <a
-	href="${pageContext.request.contextPath}/en/saucissons/produits/presentation"
+	href="${pageContext.request.contextPath}/en/saucissons/presentation"
 	style="margin-right: 20px;"> <img alt="English" title="English"
 	src="${pageContext.request.contextPath}/docroot/saucissons/images/flags/au_large.png"></a>
 <a
-	href="${pageContext.request.contextPath}/fr/saucissons/produits/presentation">
+	href="${pageContext.request.contextPath}/fr/saucissons/presentation">
 <img alt="Francais" title="Francais"
 	src="${pageContext.request.contextPath}/docroot/saucissons/images/flags/fr_large.png"></a>
 </div>

@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>info.magnolia</groupId>
 		<artifactId>magnolia-parent-pom-community-module</artifactId>
-		<version>17</version>
+		<version>19</version>
 	</parent>
 
 	<groupId>com.hut.magnolia</groupId>
@@ -15,8 +15,10 @@
 
 	<properties>
 		<magnolia.version>4.3.8</magnolia.version>
-		<blossom.version>1.1.1</blossom.version>
+		<blossom.version>1.2.1</blossom.version>
 		<spring.version>3.0.5.RELEASE</spring.version>
+		<tomcat.author.lib>/home/user/tomcat/magnolia/author/ROOT/WEB-INF/lib</tomcat.author.lib>
+		<tomcat.public.lib>/home/user/tomcat/magnolia/public/ROOT/WEB-INF/lib</tomcat.public.lib>
 	</properties>
 
 	<build>
@@ -58,6 +60,35 @@
 						<item>timestamp</item>
 					</items>
 				</configuration>
+			</plugin>
+			<!-- Copy Dependencies to Tomcat -->
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${tomcat.author.lib}</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${tomcat.public.lib}</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
@@ -125,4 +156,19 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>magnolia.nexus.public</id>
+			<url>http://nexus.magnolia-cms.com/content/groups/public</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>magnolia</id>
+			<url>http://repo.magnolia-cms.com/m2</url>
+		</pluginRepository>
+	</pluginRepositories>
+
 </project>
