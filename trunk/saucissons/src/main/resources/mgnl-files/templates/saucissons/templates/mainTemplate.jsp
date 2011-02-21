@@ -53,14 +53,14 @@
 			</div>
 			<div id="left">
 				<div id="header" class="black">
-					<div style="float:left;margin-left:55px;margin-top:10px;">
+					<div style="float:left;margin-left:35px;margin-top:10px;">
 						<a href="${pageContext.request.contextPath}/">
 							<img src="${pageContext.request.contextPath}/docroot/saucissons/images/cochon.jpg"/>
 							<br/>
 							<span style='font-size: 15px; font-family: "Script MT Bold"; color: white; font-style: italic; language: fr'>Comme &#224; la maison... </span>
 						</a>
 					</div>
-					<div style="float:right;padding-right:25px;margin-top: 80px;">
+					<div style="float:right;padding-right:25px;margin-top: 90px;">
 						<a href="${pageContext.request.contextPath}/en${cmsfn:currentPage().handle}">
 							<img src="${pageContext.request.contextPath}/docroot/saucissons/images/flags/au.png"/>
 						</a>
