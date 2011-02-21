@@ -14,11 +14,13 @@
 	<name>Saucissons Website</name>
 
 	<properties>
-		<magnolia.version>4.3.8</magnolia.version>
+		<magnolia.version>4.4.2</magnolia.version>
 		<blossom.version>1.2.1</blossom.version>
 		<spring.version>3.0.5.RELEASE</spring.version>
-		<tomcat.author.lib>/home/user/tomcat/magnolia/author/ROOT/WEB-INF/lib</tomcat.author.lib>
-		<tomcat.public.lib>/home/user/tomcat/magnolia/public/ROOT/WEB-INF/lib</tomcat.public.lib>
+		<tomcat.author>/home/user/tomcat/magnolia/author/ROOT</tomcat.author>
+		<tomcat.public>/home/user/tomcat/magnolia/public/ROOT</tomcat.public>
+		<tomcat.author.lib>${tomcat.author}/WEB-INF/lib</tomcat.author.lib>
+		<tomcat.public.lib>${tomcat.public}/WEB-INF/lib</tomcat.public.lib>
 	</properties>
 
 	<build>
@@ -66,6 +68,7 @@
 				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
 					<execution>
+						<id>copy-dependencies-author</id>
 						<phase>package</phase>
 						<goals>
 							<goal>copy-dependencies</goal>
@@ -74,12 +77,8 @@
 							<outputDirectory>${tomcat.author.lib}</outputDirectory>
 						</configuration>
 					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
 					<execution>
+						<id>copy-dependencies-public</id>
 						<phase>package</phase>
 						<goals>
 							<goal>copy-dependencies</goal>
@@ -87,6 +86,28 @@
 						<configuration>
 							<outputDirectory>${tomcat.public.lib}</outputDirectory>
 						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- Copy Docroot and Templates -->
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<configuration>
+							<tasks>
+								<copy todir="${tomcat.author}">
+									<fileset dir="${project.build.outputDirectory}/mgnl-files" />
+								</copy>
+								<copy todir="${tomcat.public}">
+									<fileset dir="${project.build.outputDirectory}/mgnl-files" />
+								</copy>
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>
