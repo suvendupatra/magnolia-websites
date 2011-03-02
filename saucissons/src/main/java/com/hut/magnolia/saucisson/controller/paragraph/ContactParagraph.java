@@ -83,7 +83,7 @@ public class ContactParagraph {
             return new ModelAndView("contactParagraph", "errorMessage", errorMessages);
         }
 
-        Map<String, String> tv = new HashMap<String, String>();
+        Map<String, Object> tv = new HashMap<String, Object>();
         tv.put("personName", name);
         tv.put("email", email);
         tv.put("enquirytype", enquirytype);

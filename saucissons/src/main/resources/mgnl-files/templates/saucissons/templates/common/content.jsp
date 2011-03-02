@@ -20,6 +20,6 @@
 		paragraph="saucisson-simple-paragraph, saucisson-nested-paragraph,
 					facebook-like-paragraph, facebook-comment-paragraph,
 					google-calendar-paragraph, contact-paragraph, carousel-paragraph,
-					youtube-paragraph"
+					youtube-paragraph, gmap-paragraph"
 		newLabel="Add Content to Page" />
 </div>

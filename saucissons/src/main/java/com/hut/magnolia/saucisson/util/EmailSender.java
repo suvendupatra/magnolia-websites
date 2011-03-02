@@ -26,7 +26,7 @@ public class EmailSender {
      * @param subject
      * @throws ServletException
      */
-    public static void sendTemplateEmail(String emailTemplateLocation, Map<String, String> templateValues, String from,
+    public static void sendTemplateEmail(String emailTemplateLocation, Map<String, Object> templateValues, String from,
             String toList, String subject, String contentType) throws ServletException {
 
         MgnlMailFactory mailFactory = ((MailModule) ModuleRegistry.Factory.getInstance().getModuleInstance("mail"))

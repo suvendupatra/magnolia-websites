@@ -89,7 +89,8 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- Copy Docroot and Templates -->
+			
+			<!-- Deploy to Tomcat -->
 			<plugin>
 				<artifactId>maven-antrun-plugin</artifactId>
 				<executions>
@@ -97,12 +98,18 @@
 						<phase>package</phase>
 						<configuration>
 							<tasks>
+								<!-- Copy Docroot and Templates -->
 								<copy todir="${tomcat.author}">
 									<fileset dir="${project.build.outputDirectory}/mgnl-files" />
 								</copy>
 								<copy todir="${tomcat.public}">
 									<fileset dir="${project.build.outputDirectory}/mgnl-files" />
 								</copy>
+								<!-- Copy JAR -->
+								<copy file="${project.build.directory}/${project.artifactId}-${project.version}.jar"
+                         			tofile="${tomcat.author.lib}/${project.artifactId}-${project.version}.jar"/>
+								<copy file="${project.build.directory}/${project.artifactId}-${project.version}.jar"
+                         			tofile="${tomcat.public.lib}/${project.artifactId}-${project.version}.jar"/>
 							</tasks>
 						</configuration>
 						<goals>
