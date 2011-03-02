@@ -54,7 +54,7 @@
 			</tr>
 			<tr>
 				<td><strong>Message</strong></td>
-				<td><textarea name="message" class="text" cols="60" rows="10"></textarea></td>
+				<td><textarea name="message" class="text" cols="60" rows="6"></textarea></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" value="Send Email" /></td>
