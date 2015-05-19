@@ -1,0 +1,1 @@
+Websites with different purposes created for small businesses. These web sites are designed using Magnolia CMS and custom templates / paragraphs.
